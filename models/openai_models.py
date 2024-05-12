@@ -10,8 +10,8 @@ class IziOpenAIModels(models.Model):
     response = fields.Text('Response')
 
     def send_message(self):
-        secret_key = ''
-        client = OpenAI(api_key=secret_key)
+        
+        client = OpenAI([INSERT_YOUR_SK_HERE!])
         msg_to_send = self.message
         
         response = client.chat.completions.create(
